@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="cs.css">
+    <title>Formulario</title>
+</head>
+<body>
+  <div class="container ">
+      <div class="row">
+    <div class="col">
+    <form class="tt">
+        <div class="form-group col-md-auto">
+            <label>Nombre</label>
+            <input id="nombre" type="text" class="form-control" placeholder="Nombre"> 
+        </div>
+        <div class="form-group col-md-6">
+            <label>Sexo</label>
+        <div class="form-check ">
+                <input id="masc" class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                <label class="form-check-label" for="exampleRadios1">
+                  Masculino
+                </label>
+              </div>
+              <div class="form-check">
+                <input id="fem" class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                <label  class="form-check-label" for="exampleRadios2">
+                  Femenino
+                </label>
+            </div>
+        </div>
+        <div class="form-group col-md-auto">
+            <label>Edad</label>
+            <input id="edad" type="text" class="form-control" placeholder="Edad">
+        </div>
+            <div class="form-group col-md-auto">
+            <label>Carrera</label>
+            <select id="Carrera" class="form-control">
+                <option selected>Elige...</option>
+                <option selected>Tecnologías de la Informacion</option>
+                <option selected>Administración</option>
+                <option selected>Mecatrónica</option>
+            </select>
+        </div>
+            <div class="form-group col-md-auto">
+                <label>Estado de Nacimiento</label>
+                <select id="state" class="form-control" aria-placeholder="Estado">
+                    <option selected>Elige...</option>
+                    <option selected>Coahuila</option>
+                    <option selected>Nuevo León</option>
+                    <option selected>Chihuahua</option>
+                    <option selected>Durango</option>
+                    <option selected>Yucatán</option>
+                </select>
+            </div>
+                <button type="button" id="aceptar" class="btn btn-primary col-md">Ingresar Datos</button>  
+        </form>
+    </div>  
+    <div class="col">
+        <table class="table col-md-auto">
+        <thead>
+            <tr>
+                <th id="nom">Nombre</th>
+                <th id="sex">Sexo</th>
+                <th id="ed">Edad</th>
+                <th id="carr">Carrera</th>
+                <th id="estado">Estado de Nacimiento</th>
+            </tr>
+        </thead>
+        </table>
+    </div>
+    </div>
+    </div>
+        
+        <script src="js/jquery-3.4.1.min.js"/></script>
+        <script src="jq.js"></script>
+        <script src="js/bootstrap.js" type="text/javascript"/></script>
+</body>
+</html>
