@@ -5,10 +5,16 @@ $(document).ready(function(){
           var edad = $('#edad').val();
           var carrera = $("#Carrera").val();
           var estado = $("#state").val();
-      
+      var mayoredad;
+      if(edad >= 18)
+      {
+          mayoredad ='Es mayor de edad';
+      }else{
+          mayoredad='Es menor de edad';
+      };
        var tbody = $('tbody');
        var tr = $('<tr></tr>');
-       var form = [nombre, sexo, edad,carrera,estado];
+       var form = [nombre, sexo, edad +' '+ mayoredad,carrera,estado];
        var items = [];
 
        form.forEach(function(i,x){
