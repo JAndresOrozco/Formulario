@@ -20,13 +20,13 @@
         <div class="form-group col-md-6">
             <label>Sexo</label>
         <div class="form-check ">
-                <input id="masc" class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                <input id="masc" class="form-check-input" type="radio" name="sexo" id="exampleRadios1" value="Masculino" checked>
                 <label class="form-check-label" for="exampleRadios1">
                   Masculino
                 </label>
               </div>
               <div class="form-check">
-                <input id="fem" class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                <input id="fem" class="form-check-input" type="radio" name="sexo" id="exampleRadios2" value="Femenino">
                 <label  class="form-check-label" for="exampleRadios2">
                   Femenino
                 </label>
@@ -39,21 +39,21 @@
             <div class="form-group col-md-auto">
             <label>Carrera</label>
             <select id="Carrera" class="form-control">
-                <option selected>Elige...</option>
-                <option selected>Tecnologías de la Informacion</option>
-                <option selected>Administración</option>
-                <option selected>Mecatrónica</option>
+                <option>Elige...</option>
+                <option>Tecnologías de la Informacion</option>
+                <option>Administración</option>
+                <option>Mecatrónica</option>
             </select>
         </div>
             <div class="form-group col-md-auto">
                 <label>Estado de Nacimiento</label>
-                <select id="state" class="form-control" aria-placeholder="Estado">
-                    <option selected>Elige...</option>
-                    <option selected>Coahuila</option>
-                    <option selected>Nuevo León</option>
-                    <option selected>Chihuahua</option>
-                    <option selected>Durango</option>
-                    <option selected>Yucatán</option>
+                <select id="state" class="form-control">
+                    <option>Elige...</option>
+                    <option>Coahuila</option>
+                    <option>Nuevo León</option>
+                    <option>Chihuahua</option>
+                    <option>Durango</option>
+                    <option>Yucatán</option>
                 </select>
             </div>
                 <button type="button" id="aceptar" class="btn btn-primary col-md">Ingresar Datos</button>  
@@ -61,6 +61,7 @@
     </div>  
     <div class="col">
         <table class="table col-md-auto">
+            <tbody>
         <thead>
             <tr>
                 <th id="nom">Nombre</th>
@@ -70,6 +71,7 @@
                 <th id="estado">Estado de Nacimiento</th>
             </tr>
         </thead>
+    </tbody>
         </table>
     </div>
     </div>
