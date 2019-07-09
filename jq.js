@@ -1,35 +1,50 @@
 $(document).ready(function(){
-    $('#aceptar').click(function(){
-          var nombre = $('#nombre').val();
-          var sexo = $('input:radio[name=sexo]:checked').val();
-          var carrera = $("#Carrera").val();
-          var estado = $("#state").val();
-          var rr;
-          var edad = $('#edad').val();
-          //Edad//
-          var mayoredad = function(){
-            if(edad >= 18)
-          {
-              rr = edad +' '+ 'Es mayor de edad';
-          }else{
-             rr= edad +' '+'Es menor de edad';
-          };
-          return rr;
-        };
-       var tbody = $('tbody');
-       var tr = $('<tr></tr>');
-       var form = [nombre, sexo, mayoredad(rr),carrera,estado];
-       var items = [];
+    $('#aceptar').click(form);
 
-       $(form).each(function(i,x){
-           var td = $('<td>' + form[i] + '</td>');
-           items.push(td); 
-           clear();
-       });
-       tr.append(items);
-       tbody.append(tr);
-    });
-    
+      function  form () {
+        $nombre =  $ ( '#nombre'). val ();
+        $sexo =  $ ( 'input:radio[name=sexo]:checked'). val ();
+        $edad =  $ ( ' #edad ' ). val ();
+        $carrera =  $ ( '#Carrera' ). val ();
+        $estado =  $ ( '#state' ). val ();
+
+        var array = [];
+          var datos = {
+            Nombre : $nombre,
+            Sexo : $sexo,
+            Edad : $edad,
+            Carrera : $carrera,
+            estado : $estado,
+            mayoredad: function() {
+              if(this.edad >= 18) {
+                this.mayoredad = 'Es mayor'
+              } else {
+                this.mayoredad = 'Es menor'
+              }
+            }
+          }
+          
+          datos.mayoredad();
+          array.push(datos); 
+          clear();
+          insert(array);
+        }
+
+          function insert(elementos){
+            var tr = '<tr>';
+          $.each(elementos[0], function(i,x){
+            var td = '<td>' + x + '</td>';
+            tr += td;
+        });
+        tr += '</tr>';
+        $('#tb').append(tr);
+          }
+          
+          
+        });
+
+      
+  
     function clear(){
         var nombre = $('#nombre').val('');
         var sexo = $('input:radio[name=sexo]:checked').val('');
@@ -38,5 +53,5 @@ $(document).ready(function(){
         var estado = $("#state").val('');
     };
     
-});
+
 
